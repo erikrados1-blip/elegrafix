@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ELEGRAFIX – Pametna računalna rješenja</title>
+<meta name="description" content="ELEGRAFIX, obrt za računalne djelatnosti, vl. Erik Radoš. Custom programiranje, izrada web stranica, optimizacija sustava i IT podrška.">
+<meta name="theme-color" content="#070b16">
+<meta name="color-scheme" content="dark">
+<meta name="author" content="ELEGRAFIX, vl. Erik Radoš">
+<meta name="copyright" content="© 2026 ELEGRAFIX. Sva prava pridržana.">
+<link rel="canonical" href="https://elegrafix.hr/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23070b16'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Arial' font-weight='800' font-size='38' fill='%232ee6a6'%3EE%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="hr_HR">
+<meta property="og:site_name" content="ELEGRAFIX">
+<meta property="og:title" content="ELEGRAFIX – Pametna računalna rješenja">
+<meta property="og:description" content="Custom programiranje, izrada web stranica, optimizacija sustava i IT podrška.">
+<meta property="og:url" content="https://elegrafix.hr/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"ELEGRAFIX","description":"Obrt za računalne djelatnosti, vl. Erik Radoš. Custom programiranje, izrada web stranica, optimizacija sustava i IT podrška.","url":"https://elegrafix.hr/","email":"elegrafix1@gmail.com","telephone":"+385955325514","areaServed":"HR","founder":{"@type":"Person","name":"Erik Radoš"}}
+</script>
+<noscript><style>.loader{display:none}body.lock{overflow:auto}.reveal{opacity:1;transform:none;animation:none}.needle{transform-box:view-box;transform-origin:100px 100px;transform:rotate(-180deg);transition:transform 1.6s var(--ease)}</style></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@320;420;520;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070b16;
+  --bg2:#0d1426;
+  --ink:#f4f7fb;
+  --muted:#93a0b8;
+  --line:rgba(255,255,255,.1);
+  --mint:#2ee6a6;
+  --cyan:#3ec5ff;
+  --blue:#5b8cff;
+  --coral:#ff6b73;
+  --card:#10192e;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+[id]{scroll-margin-top:72px}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Outfit,system-ui,sans-serif;
+  font-weight:420;
+  line-height:1.5;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+body.lock{overflow:hidden}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,p,a,span,small,label,.chip,.pill,.check{overflow-wrap:anywhere}
+.channels a span{min-width:0}
+.channels a{gap:12px}
+.channels small{flex:none}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit;color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
+.skip{position:fixed;left:12px;top:-60px;z-index:100;background:var(--mint);color:#062016;padding:10px 16px;border-radius:10px;font-weight:600;transition:top .2s}
+.skip:focus{top:12px}
+::selection{background:var(--mint);color:#062016}
+
+.progress{
+  position:fixed;left:0;top:0;height:2px;width:0;z-index:80;
+  background:linear-gradient(90deg,var(--mint),var(--cyan),var(--blue));
+}
+
+.loader{
+  position:fixed;inset:0;z-index:90;display:grid;place-items:center;
+  background:var(--bg);
+  transition:opacity .6s var(--ease),visibility .6s;
+}
+.loader.off{opacity:0;visibility:hidden}
+.loader-mark{
+  font-family:Syne,sans-serif;font-weight:800;letter-spacing:-.04em;
+  font-size:clamp(2rem,5vw,3.4rem);
+}
+.loader-mark span{
+  background:linear-gradient(90deg,var(--cyan),var(--blue));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.loader-mark b{color:var(--mint);font-weight:800}
+.loader .bar{margin:18px auto 0;width:160px;height:2px;background:rgba(255,255,255,.08);overflow:hidden}
+.loader .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--mint),var(--cyan));animation:load 1.15s var(--ease) forwards}
+@keyframes load{to{width:100%}}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:40;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:calc(18px + env(safe-area-inset-top,0px)) max(6vw,env(safe-area-inset-right,0px)) 18px max(6vw,env(safe-area-inset-left,0px));
+  transition:background .3s,border-color .3s;
+}
+nav.solid{
+  background:rgba(7,11,22,.72);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.logo{
+  font-family:Syne,sans-serif;font-weight:800;letter-spacing:-.045em;font-size:1.25rem;
+}
+.logo b{color:var(--mint);font-weight:800}
+.logo span{
+  background:linear-gradient(90deg,var(--cyan),var(--blue));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.nav-links{display:flex;gap:26px;align-items:center;color:var(--muted);font-size:.95rem}
+.nav-links a:hover{color:var(--ink)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border:0;border-radius:999px;padding:12px 20px;cursor:pointer;
+  background:linear-gradient(90deg,var(--mint),#5ad4ff 55%,var(--blue));
+  color:#06131a;font-weight:600;letter-spacing:-.01em;
+  transition:transform .35s var(--ease),filter .35s;
+}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.btn.ghost{
+  background:transparent;color:var(--ink);
+  border:1px solid var(--line);
+}
+.btn.ghost:hover{border-color:rgba(46,230,166,.5)}
+.menu-btn{
+  display:none;background:transparent;border:1px solid var(--line);
+  width:42px;height:42px;border-radius:12px;padding:0;cursor:pointer;
+}
+.menu-btn span{display:block;width:16px;height:1.5px;margin:4px auto;background:#fff}
+
+.hero{
+  min-height:100vh;min-height:100svh;overflow:hidden;padding:120px 6vw 72px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;
+  position:relative;isolation:isolate;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:
+    radial-gradient(520px circle at var(--mx,70%) var(--my,30%), rgba(46,230,166,.16), transparent 42%),
+    radial-gradient(480px circle at 12% 80%, rgba(91,140,255,.18), transparent 46%),
+    linear-gradient(180deg,#070b16 0%, #0a1224 100%);
+}
+.dots{
+  position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.35;
+  background-image:radial-gradient(rgba(255,255,255,.18) 1px, transparent 1px);
+  background-size:22px 22px;
+  mask-image:linear-gradient(180deg,#000 40%, transparent 95%);
+}
+.kicker{
+  display:inline-flex;align-items:center;gap:10px;
+  color:var(--muted);letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;font-weight:600;
+}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 12px var(--mint);animation:pulse 2.2s ease infinite}
+@keyframes pulse{50%{opacity:.35;transform:scale(.7)}}
+h1{
+  font-family:Syne,sans-serif;font-weight:800;letter-spacing:-.045em;
+  font-size:clamp(3.1rem,6.4vw,6.4rem);line-height:.92;margin:18px 0 22px;
+}
+h1 .grad{
+  display:block;
+  background:linear-gradient(100deg,var(--mint),var(--cyan) 45%,var(--blue));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  background-size:200% 100%;
+  animation:shift 7s ease infinite;
+}
+@keyframes shift{50%{background-position:100% 0}}
+.lead{max-width:540px;color:var(--muted);font-size:1.12rem;margin:0 0 28px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.pills{display:flex;gap:8px;margin-top:28px;flex-wrap:wrap}
+.pill{
+  border:1px solid var(--line);border-radius:999px;padding:7px 12px;
+  color:#d5deee;font-size:.88rem;background:rgba(255,255,255,.03);
+}
+.pill b{color:var(--mint);font-weight:600}
+
+.stage{position:relative;height:520px}
+.orb{
+  position:absolute;left:50%;top:46%;width:340px;height:340px;transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(46,230,166,.22), transparent 68%);
+  filter:blur(6px);
+}
+.ring{
+  position:absolute;left:50%;top:46%;border-radius:50%;
+  border:1px solid rgba(62,197,255,.25);
+  transform:translate(-50%,-50%);
+  animation:spin 28s linear infinite;
+}
+.ring.r1{width:300px;height:300px}
+.ring.r2{width:420px;height:420px;animation-duration:42s;animation-direction:reverse;border-style:dashed;opacity:.6}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.eli{
+  position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);
+  animation:bob 4.5s ease-in-out infinite;
+  filter:drop-shadow(0 24px 40px rgba(0,0,0,.45));
+}
+@keyframes bob2{50%{transform:translateY(-8px)}}
+@keyframes bob{50%{transform:translate(-50%,calc(-50% - 12px))}}
+.eye{transform-origin:center;animation:blink 5.4s infinite}
+.eye.d{animation-delay:.08s}
+@keyframes blink{
+  0%,42%,48%,100%{transform:scaleY(1)}
+  45%{transform:scaleY(.08)}
+}
+.ant{transform-origin:20px 48px;animation:ant 3.2s ease-in-out infinite}
+@keyframes ant{50%{transform:rotate(8deg)}}
+.chip{
+  position:absolute;padding:10px 14px;border-radius:14px;
+  background:rgba(16,25,46,.8);border:1px solid var(--line);
+  backdrop-filter:blur(10px);font-size:.88rem;color:#dbe4f5;
+  animation:float 6s ease-in-out infinite;
+}
+.chip small{display:block;color:var(--muted);font-size:.72rem}
+.chip.c1{left:0;top:70px}
+.chip.c2{right:0;top:150px;animation-delay:-2s}
+.chip.c3{left:18px;bottom:54px;animation-delay:-3.4s}
+@keyframes float{50%{transform:translateY(-10px)}}
+
+.marquee{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  overflow:hidden;padding:16px 0;color:var(--muted);
+  background:rgba(255,255,255,.015);
+}
+.marquee-track{display:flex;gap:0;width:max-content;animation:marq 28s linear infinite}
+.marquee span{padding:0 22px;letter-spacing:.16em;text-transform:uppercase;font-size:.75rem;font-weight:600}
+.marquee b{color:var(--mint);font-weight:600}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+section{position:relative}
+.wrap{width:min(1120px,88vw);margin:0 auto}
+.sec-kicker{color:var(--mint);letter-spacing:.16em;text-transform:uppercase;font-size:.72rem;font-weight:600}
+h2{
+  font-family:Syne,sans-serif;font-weight:750;letter-spacing:-.04em;
+  font-size:clamp(2.2rem,4.5vw,4rem);line-height:1;margin:10px 0 12px;
+}
+.sub{color:var(--muted);max-width:520px;margin:0}
+.case .arrow{justify-self:center}
+
+.h-scroll{height:320vh}
+.h-sticky{
+  position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.h-head{padding:0 6vw 28px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.h-track{display:flex;gap:22px;padding:0 6vw;will-change:transform}
+.card{
+  width:min(400px,78vw);flex:none;min-height:360px;
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+  border:1px solid var(--line);border-radius:28px;padding:28px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  transition:border-color .4s,transform .4s var(--ease);
+}
+.card:hover{border-color:rgba(46,230,166,.45);transform:translateY(-6px)}
+.card .n{font-family:Syne,sans-serif;color:var(--mint);font-size:.9rem;letter-spacing:.08em}
+.card h3{font-family:Syne,sans-serif;font-size:2rem;line-height:1.1;letter-spacing:-.03em;margin:10px 0 8px}
+.card p{color:var(--muted);margin:0}
+.mini{margin-top:28px;border-radius:16px;background:#0a1020;border:1px solid var(--line);padding:14px;min-height:132px}
+.code-line{font-family:ui-monospace,Consolas,monospace;font-size:.82rem;color:#c9d4ea;margin:4px 0}
+.code-line em{color:var(--cyan);font-style:normal}
+.code-line i{color:var(--mint);font-style:normal}
+.ok{display:inline-block;margin-top:8px;color:#062016;background:var(--mint);border-radius:999px;padding:4px 10px;font-size:.75rem;font-weight:600}
+.browser{background:#10192e;border-radius:12px;overflow:hidden}
+.browser .top{display:flex;gap:6px;padding:8px 10px;background:#0c1324}
+.browser .top i{width:8px;height:8px;border-radius:50%;background:#ff6b73}
+.browser .top i:nth-child(2){background:#ffc14d}
+.browser .top i:nth-child(3){background:var(--mint)}
+.browser .body{padding:12px}
+.barline{height:8px;border-radius:99px;background:linear-gradient(90deg,var(--mint),var(--blue));width:46%}
+.ghostline{height:8px;border-radius:99px;background:rgba(255,255,255,.08);margin-top:8px}
+.ghostline.s{width:70%}
+.gauge-mini{display:grid;place-items:center}
+.gauge-mini svg{width:180px}
+.support-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.support-row:last-child{border:0}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 8px var(--mint)}
+
+.solutions{padding:110px 0}
+.cases{margin-top:42px;display:grid;gap:16px}
+.case{
+  display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;
+  padding:22px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.02);
+}
+.case .tag{font-size:.72rem;letter-spacing:.14em;font-weight:700}
+.bad .tag{color:var(--coral)}
+.good .tag{color:var(--mint)}
+.case p{margin:6px 0 0;font-size:1.05rem}
+.arrow{
+  width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(180deg,var(--mint),var(--cyan));color:#062016;font-weight:700;
+}
+.reveal{opacity:0;transform:translateY(24px);animation:rise .8s var(--ease) forwards;animation-play-state:paused}
+.reveal.show{animation-play-state:running}
+.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+.speed{padding:40px 0 110px}
+.speed-box{
+  margin-top:36px;border-radius:32px;padding:42px;
+  background:
+    radial-gradient(400px circle at 80% 20%, rgba(46,230,166,.16), transparent 50%),
+    linear-gradient(180deg,#10192e,#0b1222);
+  border:1px solid var(--line);
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;
+}
+.needle{transform-box:view-box;transform-origin:100px 110px;transform:rotate(-150deg);transition:transform 1.4s var(--ease)}
+.speed-box.in .needle{transform:rotate(-27deg)}
+.gauge{width:100%;max-width:420px;margin:0 auto;height:auto}
+.speed-box > div:last-child{text-align:center}
+.speed-label{font-family:Syne,sans-serif;font-size:3rem;letter-spacing:-.04em;color:var(--mint);margin:8px 0 0}
+.checks{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.check{border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:.9rem}
+
+.process{padding:20px 0 110px}
+.steps{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative}
+.steps::before{
+  content:"";position:absolute;left:6%;right:6%;top:28px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--mint),var(--cyan),transparent);
+  transform:scaleX(0);transform-origin:left;transition:transform 1.2s var(--ease);
+}
+.steps.in::before{transform:scaleX(1)}
+.step{padding:22px 8px 0}
+@media(max-width:980px){.step{padding:22px 0 0}}
+.step strong{
+  font-family:Syne,sans-serif;display:grid;place-items:center;
+  width:56px;height:56px;border-radius:50%;margin-bottom:16px;
+  background:#0d1528;border:1px solid rgba(46,230,166,.4);color:var(--mint);
+}
+.step h3{margin:0 0 6px;font-size:1.15rem;font-family:Syne,sans-serif;letter-spacing:-.02em}
+.step p{margin:0;color:var(--muted);font-size:.95rem}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:36px 6vw 36px 0}
+.stat + .stat{border-left:1px solid var(--line);padding-left:28px}
+.stat b{display:block;font-family:Syne,sans-serif;font-size:clamp(2rem,3vw,2.8rem);letter-spacing:-.04em}
+.stat span{color:var(--muted)}
+
+.contact{padding:110px 0}
+.contact-grid{display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:start}
+.channels{display:flex;flex-direction:column;gap:10px;margin-top:26px}
+.channels a{
+  display:flex;justify-content:space-between;align-items:center;
+  border:1px solid var(--line);border-radius:16px;padding:14px 16px;
+  background:rgba(255,255,255,.02);
+}
+.channels a:hover{border-color:rgba(46,230,166,.45)}
+.channels small{color:var(--muted)}
+form{
+  background:#10192e;border:1px solid var(--line);border-radius:28px;padding:22px;
+  display:grid;gap:12px;
+}
+label{display:grid;gap:6px;font-size:.85rem;color:var(--muted)}
+input,textarea{
+  background:#0b1222;border:1px solid var(--line);border-radius:12px;padding:12px 14px;outline:none;
+}
+input:focus,textarea:focus{border-color:rgba(46,230,166,.6)}
+textarea{min-height:120px;resize:vertical}
+.fine{color:var(--muted);font-size:.8rem;margin:0}
+
+footer{padding:28px max(6vw,env(safe-area-inset-right,0px)) calc(40px + env(safe-area-inset-bottom,0px)) max(6vw,env(safe-area-inset-left,0px));color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .row + .row{margin-top:14px;font-size:.8rem}
+footer a{text-decoration:underline;text-decoration-color:rgba(255,255,255,.25);text-underline-offset:3px}
+footer a:hover{color:var(--ink)}
+.status{margin:0;font-size:.88rem;color:var(--mint);min-height:1.2em}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+
+.mobile-panel{
+  display:none;position:fixed;inset:70px 16px auto;z-index:45;
+  background:#10192e;border:1px solid var(--line);border-radius:18px;padding:12px;
+}
+.mobile-panel a{display:block;padding:12px;border-radius:10px}
+.mobile-panel a:hover{background:rgba(255,255,255,.04)}
+.mobile-panel.open{display:grid}
+.mobile-panel{inset:calc(70px + env(safe-area-inset-top,0px)) 16px auto}
+
+
+/* ---- IT provjera (kviz) ---- */
+.quiz{padding:20px 0 110px}
+.quiz-head{max-width:640px;margin-bottom:34px}
+.quiz-box{position:relative;border:1px solid var(--line);border-radius:36px;padding:44px;background:linear-gradient(160deg,rgba(46,230,166,.09),rgba(91,140,255,.08) 55%,rgba(16,25,46,.75));box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.q-top{display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--muted);font-size:.9rem;margin-bottom:12px;min-height:26px}
+.q-back{background:none;border:0;color:var(--muted);font:inherit;font-size:.9rem;cursor:pointer;padding:4px 0}
+.q-back:hover{color:var(--ink)}
+.q-bar{height:6px;border-radius:9px;background:rgba(255,255,255,.08);overflow:hidden;margin-bottom:28px}
+.q-bar i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--mint),var(--blue));transition:width .5s var(--ease)}
+.q-title{font-family:Syne,sans-serif;font-size:clamp(1.3rem,3.6vw,1.9rem);line-height:1.2;letter-spacing:-.02em;margin:0 0 22px;font-weight:700}
+.q-opts{display:grid;gap:12px}
+.q-opt{display:block;width:100%;text-align:left;padding:18px 20px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--ink);font:inherit;font-size:1.02rem;line-height:1.35;cursor:pointer;transition:border-color .25s,background .25s,transform .25s}
+.q-opt:hover{border-color:rgba(46,230,166,.55);background:rgba(46,230,166,.07)}
+.q-opt.sel{border-color:var(--mint);background:rgba(46,230,166,.16)}
+.q-result{display:none;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px;align-items:center}
+.quiz-box.done .q-quiz{display:none}
+.quiz-box.done .q-result{display:grid}
+.q-gauge{text-align:center}
+.q-score{margin-top:-6px;font-family:Syne,sans-serif;font-size:3.2rem;font-weight:800;letter-spacing:-.04em;line-height:1}
+.q-score small{font-size:1.3rem;color:var(--muted);font-weight:600}
+.q-text h3{font-family:Syne,sans-serif;font-size:clamp(1.4rem,3.4vw,1.9rem);line-height:1.15;letter-spacing:-.02em;margin:0 0 10px}
+.q-text p{color:var(--muted);margin:0 0 16px}
+.q-tips{list-style:none;display:grid;gap:8px;margin:0 0 22px;padding:0}
+.q-tips li{position:relative;padding:12px 14px 12px 40px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.03);font-size:.97rem}
+.q-tips li::before{content:"";position:absolute;left:15px;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:var(--mint);box-shadow:0 0 10px var(--mint)}
+.q-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.q-again{background:none;border:0;color:var(--muted);font:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:8px 4px}
+.q-again:hover{color:var(--ink)}
+@media(max-width:780px){
+  .quiz{padding:10px 0 80px}
+  .quiz-box{padding:24px 18px;border-radius:26px}
+  .q-result{grid-template-columns:1fr;gap:22px}
+  .q-gauge .gauge{max-width:300px}
+  .q-actions .btn{width:100%}
+  .q-opt{padding:16px}
+}
+@media(max-width:980px),(max-height:620px){
+  .h-scroll{height:auto !important}
+  .h-sticky{position:relative;height:auto;overflow:visible;padding:80px 0}
+  .h-track{flex-direction:column;transform:none !important}
+  .card{width:min(560px,88vw)}
+  .h-head{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:980px){
+  .hero > *{min-width:0}
+  h1{white-space:nowrap;line-height:1.1}
+  h1 br{display:none}
+  h1 .grad{display:inline}
+  .nav-links,.hero-side-links{display:none}
+  .menu-btn{display:inline-block}
+  .hero,.speed-box,.contact-grid,.case{grid-template-columns:1fr}
+  .hero{padding-top:110px;min-height:auto}
+  .stage{height:420px}
+  .case .arrow{transform:rotate(90deg)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .steps::before{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat,.stat + .stat{padding:26px 18px;border-left:0;border-top:1px solid var(--line)}
+  .stat:nth-child(-n+2){border-top:0}
+  .stat:nth-child(even){border-left:1px solid var(--line)}
+  .speed-box{padding:30px}
+}
+@media(min-width:981px){.mobile-panel{display:none !important}}
+@media(max-width:560px){
+  .stat,.stat + .stat,.stat:nth-child(even){padding:22px 0}
+  .hero,.h-head,.h-track,nav,footer{padding-left:6vw;padding-right:6vw}
+  .h-track{padding-top:0;padding-bottom:0;align-items:stretch}
+  .card{width:100%}
+  .speed-box > div{min-width:0}
+  .speed-box h2,.sub,.lead{max-width:100%}
+  h1{font-size:clamp(2.3rem,12vw,3.1rem);line-height:.98}
+  h2{font-size:clamp(1.9rem,9vw,2.4rem)}
+  .nav-links{display:none}
+  .lead{font-size:1rem}
+  .hero-actions .btn{flex:1 1 100%}
+  .stage{height:auto;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:10px 0 0}
+  .eli{position:relative;left:auto;top:auto;transform:none;width:100%;height:210px;animation:bob2 4.5s ease-in-out infinite}
+  .orb,.ring{top:115px}
+  .chip{position:static;animation:none}
+  .ring.r1{width:240px;height:240px}
+  .ring.r2{width:330px;height:330px}
+  .orb{width:260px;height:260px}
+  .chip{padding:8px 11px;font-size:.78rem}
+  .steps{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+  .stat,.stat + .stat,.stat:nth-child(even){border-left:0;border-top:1px solid var(--line)}
+  .stat:nth-child(1){border-top:0}
+  .stat:nth-child(2){border-top:1px solid var(--line)}
+  .speed-box{padding:24px;border-radius:24px}
+  .gauge{width:100%;max-width:420px;margin:0 auto;height:auto}
+.speed-box > div:last-child{text-align:center}
+.speed-label{font-size:2.2rem}
+  .case{padding:18px}
+  .card{padding:22px;min-height:0}
+  .solutions,.contact{padding:72px 0}
+  form{padding:16px;border-radius:22px}
+  .channels a{padding:13px 14px}
+}
+@media(max-width:360px){
+  .chip small{display:none}
+}
+@media(hover:none){
+  .card:hover{transform:none}
+  .btn:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .reveal{opacity:1;transform:none}
+  .needle{transform:rotate(-27deg)}
+  .steps::before{transform:scaleX(1)}
+}
+</style>
+</head>
+<body class="lock">
+<a class="skip" href="#main">Preskoči na sadržaj</a>
+<div class="progress" id="progress"></div>
+<div class="loader" id="loader" aria-hidden="true">
+  <div>
+    <div class="loader-mark"><b>ELE</b><span>GRAFIX</span></div>
+    <div class="bar"><i></i></div>
+  </div>
+</div>
+
+<nav id="nav" aria-label="Glavna navigacija">
+  <a class="logo" href="#top"><b>ELE</b><span>GRAFIX</span></a>
+  <div class="nav-links">
+    <a href="#usluge">Usluge</a>
+    <a href="#rjesenja">Rješenja</a>
+  <a href="#provjera">Provjera</a>
+    <a href="#proces">Kako radimo</a>
+    <a href="#kontakt">Kontakt</a>
+    <a class="btn" href="#kontakt">Zatražite ponudu</a>
+  </div>
+  <button class="menu-btn" id="menuBtn" type="button" aria-label="Otvori izbornik" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-panel" id="menu" role="navigation" aria-label="Mobilni izbornik">
+  <a href="#usluge">Usluge</a>
+  <a href="#rjesenja">Rješenja</a>
+  <a href="#provjera">Provjera</a>
+  <a href="#proces">Kako radimo</a>
+  <a href="#kontakt">Kontakt</a>
+</div>
+
+<main id="main">
+<header class="hero" id="top">
+  <div class="dots"></div>
+  <div>
+    <div class="kicker"><i></i> Pametna računalna rješenja</div>
+    <h1 id="h1">Vaši problemi <br><span class="grad">u kod koji radi.</span></h1>
+    <p class="lead">Custom programiranje, izrada web stranica, optimizacija sustava i IT podrška za tvrtke koje žele raditi brže, sigurnije i bez nepotrebnih troškova.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#kontakt">Zatražite ponudu</a>
+      <a class="btn ghost" href="#usluge">Pogledajte usluge</a>
+    </div>
+    <div class="pills">
+      <span class="pill"><b>✓</b> Brza</span>
+      <span class="pill"><b>✓</b> Sigurna</span>
+      <span class="pill"><b>✓</b> Moderna</span>
+    </div>
+  </div>
+  <div class="stage" aria-hidden="true">
+    <div class="orb"></div>
+    <div class="ring r1"></div>
+    <div class="ring r2"></div>
+    <svg class="eli" width="210" height="250" viewBox="0 0 210 250">
+      <g class="ant">
+        <rect x="101" y="18" width="8" height="28" rx="4" fill="#6d7cff"/>
+        <circle cx="105" cy="16" r="10" fill="#5dffc8"/>
+        <circle cx="105" cy="16" r="16" fill="#5dffc8" opacity=".25"/>
+      </g>
+      <rect x="28" y="48" width="154" height="112" rx="32" fill="#243056"/>
+      <rect x="40" y="62" width="130" height="84" rx="22" fill="#12182b"/>
+      <ellipse class="eye" cx="82" cy="100" rx="14" ry="18" fill="#3dffb0"/>
+      <ellipse class="eye d" cx="128" cy="100" rx="14" ry="18" fill="#3dffb0"/>
+      <ellipse cx="78" cy="94" rx="4" ry="5" fill="#eafff6"/>
+      <ellipse cx="124" cy="94" rx="4" ry="5" fill="#eafff6"/>
+      <path d="M90 118 Q105 128 120 118" stroke="#3dffb0" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="22" cy="96" r="12" fill="#2c3a68"/>
+      <circle cx="188" cy="96" r="12" fill="#2c3a68"/>
+      <circle cx="22" cy="96" r="4" fill="#4d8cff"/>
+      <circle cx="188" cy="96" r="4" fill="#4d8cff"/>
+      <rect x="68" y="156" width="74" height="62" rx="16" fill="#2a3864"/>
+      <text x="105" y="196" text-anchor="middle" font-family="Syne,sans-serif" font-size="28" font-weight="800" fill="#2ee6a6">E</text>
+      <circle cx="88" cy="206" r="3.5" fill="#3dff8a"/>
+      <circle cx="105" cy="206" r="3.5" fill="#ffb020"/>
+      <circle cx="122" cy="206" r="3.5" fill="#4d8cff"/>
+      <rect x="78" y="214" width="16" height="28" rx="8" fill="#243056"/>
+      <rect x="116" y="214" width="16" height="28" rx="8" fill="#243056"/>
+      <ellipse cx="86" cy="242" rx="14" ry="7" fill="#1c2748"/>
+      <ellipse cx="124" cy="242" rx="14" ry="7" fill="#1c2748"/>
+    </svg>
+    <div class="chip c1">Web stranica<small>brza · sigurna · moderna</small></div>
+    <div class="chip c2">Program po mjeri<small>bez ručnog prepisivanja</small></div>
+    <div class="chip c3">IT podrška<small>jedan poziv za sve</small></div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Programiranje <b>·</b></span><span>Web stranice <b>·</b></span><span>Optimizacija <b>·</b></span><span>IT podrška <b>·</b></span><span>Automatizacija <b>·</b></span><span>Integracije <b>·</b></span>
+    <span>Programiranje <b>·</b></span><span>Web stranice <b>·</b></span><span>Optimizacija <b>·</b></span><span>IT podrška <b>·</b></span><span>Automatizacija <b>·</b></span><span>Integracije <b>·</b></span>
+  </div>
+</div>
+
+<section class="h-scroll" id="usluge">
+  <div class="h-sticky">
+    <div class="h-head">
+      <div>
+        <div class="sec-kicker">Što radimo</div>
+        <h2>Četiri stupa.<br>Jedan cilj.</h2>
+      </div>
+      <p class="sub">Da vam tehnologija radi za vas, a ne obrnuto.</p>
+    </div>
+    <div class="h-track" id="track">
+      <article class="card">
+        <div>
+          <div class="n">01</div>
+          <h3>Custom programiranje</h3>
+          <p>Aplikacije, alati i automatizacije izrađeni točno prema vašim procesima.</p>
+        </div>
+        <div class="mini">
+          <div class="code-line"><em>def</em> obradi_narudzbu(n):</div>
+          <div class="code-line">&nbsp;&nbsp;racun = <i>izdaj_racun</i>(n)</div>
+          <div class="code-line">&nbsp;&nbsp;<em>return</em> "Gotovo"</div>
+          <span class="ok">Testovi prošli · sve radi</span>
+        </div>
+      </article>
+      <article class="card">
+        <div>
+          <div class="n">02</div>
+          <h3>Izrada web stranica</h3>
+          <p>Moderne, brze stranice prilagođene mobitelima, od jednostavnih prezentacijskih do složenijih, uz pomoć oko domene i hostinga.</p>
+        </div>
+        <div class="mini">
+          <div class="browser">
+            <div class="top"><i></i><i></i><i></i></div>
+            <div class="body">
+              <div class="barline"></div>
+              <div class="ghostline s"></div>
+              <div class="ghostline"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div>
+          <div class="n">03</div>
+          <h3>Optimizacija sustava</h3>
+          <p>Ubrzavamo sporo računalo, mrežu i softver te uklanjamo uska grla koja vas koče.</p>
+        </div>
+        <div class="mini">
+          <div class="gauge-mini">
+            <svg viewBox="0 0 180 96" role="img" aria-label="Pokazivač brzine">
+              <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="16" y1="0" x2="164" y2="0"><stop stop-color="#ff6b73"/><stop offset=".5" stop-color="#ffc14d"/><stop offset="1" stop-color="#2ee6a6"/></linearGradient></defs>
+              <path d="M16 86 A74 74 0 0 1 164 86" fill="none" stroke="#243049" stroke-width="12" stroke-linecap="round"/>
+              <path d="M16 86 A74 74 0 0 1 155.9 52.4" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div>
+          <div class="n">04</div>
+          <h3>IT podrška</h3>
+          <p>Brza reakcija, jasna komunikacija i rješenja koja traju. Vaš tim nije prepušten sam sebi.</p>
+        </div>
+        <div class="mini">
+          <div class="support-row"><span class="dot"></span> Kvar prijavljen <span style="margin-left:auto;color:var(--muted)">2 min</span></div>
+          <div class="support-row"><span class="dot"></span> Uzrok pronađen <span style="margin-left:auto;color:var(--muted)">18 min</span></div>
+          <div class="support-row"><span class="dot"></span> Sustav radi <span style="margin-left:auto;color:var(--mint)">gotovo</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="solutions" id="rjesenja">
+  <div class="wrap">
+    <div class="sec-kicker">Rješenja</div>
+    <h2>Prepoznajete li se?</h2>
+    <p class="sub">Tipični problemi koje pretvaramo u alat koji vam svaki dan štedi vrijeme.</p>
+    <div class="cases">
+      <article class="case reveal">
+        <div class="bad"><div class="tag">PRIJE</div><p>Podaci se ručno prepisuju iz tablice u tablicu.</p></div>
+        <div class="arrow">→</div>
+        <div class="good"><div class="tag">POSLIJE</div><p>Vlastita aplikacija ih povezuje i obračunava sama.</p></div>
+      </article>
+      <article class="case reveal d1">
+        <div class="bad"><div class="tag">PRIJE</div><p>Računalo se dugo pali i koči usred posla.</p></div>
+        <div class="arrow">→</div>
+        <div class="good"><div class="tag">POSLIJE</div><p>Optimiziran sustav: brz, stabilan i siguran.</p></div>
+      </article>
+      <article class="case reveal d2">
+        <div class="bad"><div class="tag">PRIJE</div><p>Svaki kvar je panika i čekanje na pomoć.</p></div>
+        <div class="arrow">→</div>
+        <div class="good"><div class="tag">POSLIJE</div><p>Redovno održavanje i brza IT podrška na jedan poziv.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="speed">
+  <div class="wrap">
+    <div class="speed-box" id="speed">
+      <div>
+        <div class="sec-kicker">Optimizacija</div>
+        <h2>Računalo je sporo?<br>Ubrzat ćemo ga.</h2>
+        <div class="checks">
+          <span class="check">Brži start</span>
+          <span class="check">Stabilniji rad</span>
+          <span class="check">Manje zastoja</span>
+        </div>
+      </div>
+      <div>
+        <svg class="gauge" viewBox="0 0 200 124" role="img" aria-label="Brzina sustava: brzo">
+          <defs><linearGradient id="gg" gradientUnits="userSpaceOnUse" x1="20" y1="0" x2="180" y2="0"><stop offset="0" stop-color="#ff6b73"/><stop offset=".5" stop-color="#ffc14d"/><stop offset="1" stop-color="#2ee6a6"/></linearGradient></defs>
+          <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="#1c2740" stroke-width="14" stroke-linecap="round"/>
+          <path d="M20 100 A80 80 0 0 1 171.3 63.7" fill="none" stroke="url(#gg)" stroke-width="14" stroke-linecap="round"/>
+          <g stroke="#93a0b8" stroke-width="1.5" stroke-linecap="round" opacity=".55">
+            <line x1="100" y1="12" x2="100" y2="19"/><line x1="43.4" y1="43.4" x2="48.4" y2="48.4"/><line x1="156.6" y1="43.4" x2="151.6" y2="48.4"/>
+          </g>
+          <g class="needle">
+            <line x1="100" y1="100" x2="160" y2="100" stroke="#f4f7fb" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="100" cy="100" r="8" fill="#f4f7fb"/><circle cx="100" cy="100" r="3" fill="#0b1222"/>
+          </g>
+          <text x="20" y="120" text-anchor="middle" fill="#93a0b8" font-size="11" font-family="Outfit,sans-serif">Sporo</text>
+          <text x="180" y="120" text-anchor="middle" fill="#93a0b8" font-size="11" font-family="Outfit,sans-serif">Brzo</text>
+        </svg>
+        <div class="speed-label">BRZO</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quiz" id="provjera">
+  <div class="wrap">
+    <div class="quiz-head reveal">
+      <div class="sec-kicker">Besplatna provjera</div>
+      <h2>Koliko je vaš IT zdrav?</h2>
+      <p class="sub">5 brzih pitanja, oko 30 sekundi. Dobijete ocjenu i konkretan savjet što popraviti prvo.</p>
+    </div>
+    <div class="quiz-box reveal d1" id="quiz">
+      <div class="q-quiz">
+        <div class="q-top"><span id="qStep">Pitanje 1 od 5</span><button type="button" class="q-back" id="qBack" hidden>← Natrag</button></div>
+        <div class="q-bar"><i id="qBar"></i></div>
+        <h3 class="q-title" id="qTitle"></h3>
+        <div class="q-opts" id="qOpts"></div>
+      </div>
+      <div class="q-result" id="qResult" aria-live="polite">
+        <div class="q-gauge">
+          <svg class="gauge" viewBox="0 0 200 124" role="img" aria-label="Vaša ocjena">
+            <defs><linearGradient id="qg" gradientUnits="userSpaceOnUse" x1="20" y1="0" x2="180" y2="0"><stop offset="0" stop-color="#ff6b73"/><stop offset=".5" stop-color="#ffc14d"/><stop offset="1" stop-color="#2ee6a6"/></linearGradient></defs>
+            <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="url(#qg)" stroke-width="14" stroke-linecap="round"/>
+            <g class="needle" id="qNeedle">
+              <line x1="100" y1="100" x2="160" y2="100" stroke="#f4f7fb" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="100" cy="100" r="8" fill="#f4f7fb"/><circle cx="100" cy="100" r="3" fill="#0b1222"/>
+            </g>
+            <text x="20" y="120" text-anchor="middle" fill="#93a0b8" font-size="11" font-family="Outfit,sans-serif">Slabo</text>
+            <text x="180" y="120" text-anchor="middle" fill="#93a0b8" font-size="11" font-family="Outfit,sans-serif">Odlično</text>
+          </svg>
+          <div class="q-score"><b id="qScore">0</b><small>/10</small></div>
+        </div>
+        <div class="q-text">
+          <h3 id="qVerdict"></h3>
+          <p id="qLead"></p>
+          <ul class="q-tips" id="qTips"></ul>
+          <div class="q-actions">
+            <button type="button" class="btn" id="qSend">Pošaljite rezultat — besplatan savjet</button>
+            <button type="button" class="q-again" id="qAgain">Ponovi provjeru</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="proces">
+  <div class="wrap">
+    <div class="sec-kicker">Kako radimo</div>
+    <h2>Bez iznenađenja.</h2>
+    <div class="steps" id="steps">
+      <article class="step"><strong>01</strong><h3>Razgovor</h3><p>Slušamo što vas muči i što želite postići.</p></article>
+      <article class="step"><strong>02</strong><h3>Analiza i prijedlog</h3><p>Dobivate jasan plan, rok i cijenu unaprijed.</p></article>
+      <article class="step"><strong>03</strong><h3>Izrada</h3><p>Razvijamo i testiramo rješenje uz redovne povratne informacije.</p></article>
+      <article class="step"><strong>04</strong><h3>Podrška</h3><p>Ostajemo uz vas i nakon isporuke.</p></article>
+    </div>
+  </div>
+</section>
+
+<div class="stats wrap">
+  <div class="stat"><b>100%</b><span>prilagođeno vama</span></div>
+  <div class="stat"><b>24/7</b><span>razmišljamo o rješenju</span></div>
+  <div class="stat"><b>0</b><span>skrivenih troškova</span></div>
+  <div class="stat"><b>1</b><span>kontakt za sve</span></div>
+</div>
+
+<section class="contact" id="kontakt">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="sec-kicker">Kontakt</div>
+      <h2>Imate problem?<br>Imamo kod.</h2>
+      <p class="sub">Opišite problem u nekoliko rečenica. Javljamo se što prije. ELEGRAFIX, obrt za računalne djelatnosti, vl. Erik Radoš.</p>
+      <div class="channels">
+        <a href="mailto:elegrafix1@gmail.com"><span>elegrafix1@gmail.com</span><small>e-mail</small></a>
+        <a href="tel:+385955325514"><span>095 532 5514</span><small>telefon</small></a>
+        <a href="https://wa.me/385955325514" target="_blank" rel="noopener"><span>WhatsApp</span><small>brzi upit</small></a>
+        <a href="https://instagram.com/elegrafixweb" target="_blank" rel="noopener"><span>@elegrafixweb</span><small>Instagram</small></a>
+      </div>
+    </div>
+    <form id="form" novalidate>
+      <label>Ime<input name="ime" required maxlength="80" autocomplete="name" placeholder="Vaše ime"></label>
+      <label>Kontakt<input name="kontakt" required maxlength="120" autocomplete="email" placeholder="Telefon ili e-mail"></label>
+      <label>Poruka<textarea name="poruka" required maxlength="2000" placeholder="Što vas muči?"></textarea></label>
+      <label class="hp" aria-hidden="true">Ostavite prazno<input name="web" tabindex="-1" autocomplete="off"></label>
+      <button class="btn" type="submit">Pošalji upit</button>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+      <p class="fine">Poruka se otvara u vašem e-mail programu i stiže izravno nama. Podatke koristimo isključivo za odgovor na vaš upit.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="row">
+    <div><strong style="color:var(--ink)">ELEGRAFIX</strong> · Obrt za računalne djelatnosti · vl. Erik Radoš · OIB 06991768412</div>
+    <div><a href="mailto:elegrafix1@gmail.com">elegrafix1@gmail.com</a> · <a href="tel:+385955325514">095 532 5514</a></div>
+  </div>
+  <div class="row">
+    <div>© <span id="year">2026</span> ELEGRAFIX. Sva prava pridržana. Sav sadržaj, dizajn i kod na ovoj stranici zaštićeni su autorskim pravom i ne smiju se kopirati ni koristiti bez pisanog dopuštenja.</div>
+    <div><a href="#top">Natrag na vrh ↑</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var loader = document.getElementById('loader');
+  var finished = false;
+  function done(){
+    if (finished) return;
+    finished = true;
+    loader.classList.add('off');
+    document.body.classList.remove('lock');
+  }
+  window.addEventListener('load', function(){ setTimeout(done, 900); });
+  setTimeout(done, 2200);
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var nav = document.getElementById('nav');
+  var progress = document.getElementById('progress');
+  var hero = document.querySelector('.hero');
+  var track = document.getElementById('track');
+  var scroller = document.querySelector('.h-scroll');
+  var mq = window.matchMedia('(max-width:980px),(max-height:620px)');
+  var maxX = 0, ticking = false;
+
+  function measure(){
+    if (mq.matches){
+      scroller.style.height = '';
+      track.style.transform = '';
+      maxX = 0;
+    } else {
+      track.style.transform = 'translate3d(0,0,0)';
+      maxX = Math.max(track.scrollWidth - window.innerWidth, 0);
+      scroller.style.height = (window.innerHeight + maxX) + 'px';
+    }
+    update();
+  }
+  function update(){
+    ticking = false;
+    var y = window.pageYOffset || 0;
+    nav.classList.toggle('solid', y > 24);
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (h > 0 ? Math.min(y / h, 1) * 100 : 0) + '%';
+    if (!mq.matches && maxX > 0){
+      var top = scroller.getBoundingClientRect().top + y;
+      var total = scroller.offsetHeight - window.innerHeight;
+      var p = total > 0 ? Math.min(Math.max((y - top) / total, 0), 1) : 0;
+      track.style.transform = 'translate3d(' + (-p * maxX) + 'px,0,0)';
+    }
+  }
+  function onScroll(){
+    if (!ticking){ ticking = true; requestAnimationFrame(update); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', measure);
+  window.addEventListener('orientationchange', measure);
+  window.addEventListener('load', measure);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+  if (mq.addEventListener) mq.addEventListener('change', measure);
+  measure();
+
+  hero.addEventListener('pointermove', function(e){
+    if (e.pointerType === 'touch') return;
+    var r = hero.getBoundingClientRect();
+    hero.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+    hero.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+  });
+
+  var targets = document.querySelectorAll('.reveal, #speed, #steps');
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ en.target.classList.add('show','in'); io.unobserve(en.target); }
+      });
+    }, {threshold:.15, rootMargin:'0px 0px -8% 0px'});
+    targets.forEach(function(el){ io.observe(el); });
+  } else {
+    targets.forEach(function(el){ el.classList.add('show','in'); });
+  }
+
+  var menu = document.getElementById('menu');
+  var menuBtn = document.getElementById('menuBtn');
+  function setMenu(open){
+    menu.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.setAttribute('aria-label', open ? 'Zatvori izbornik' : 'Otvori izbornik');
+  }
+  menuBtn.addEventListener('click', function(e){ e.stopPropagation(); setMenu(!menu.classList.contains('open')); });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+  document.addEventListener('click', function(e){
+    if (!menu.contains(e.target) && e.target !== menuBtn) setMenu(false);
+  });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setMenu(false); });
+  window.addEventListener('resize', function(){ if (window.innerWidth > 980) setMenu(false); });
+
+  var form = document.getElementById('form');
+  var status = document.getElementById('status');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var d = new FormData(form);
+    if (d.get('web')) return;
+    var ime = String(d.get('ime') || '').trim();
+    var kontakt = String(d.get('kontakt') || '').trim();
+    var poruka = String(d.get('poruka') || '').trim();
+    if (!ime || !kontakt || !poruka){
+      status.style.color = 'var(--coral)';
+      status.textContent = 'Molimo ispunite sva polja.';
+      return;
+    }
+    var body = 'Ime: ' + ime + '\nKontakt: ' + kontakt + '\n\n' + poruka;
+    status.style.color = 'var(--mint)';
+    status.textContent = 'Otvaramo vaš e-mail program… Ako se ništa ne dogodi, pišite na elegrafix1@gmail.com.';
+    window.location.href = 'mailto:elegrafix1@gmail.com?subject=' + encodeURIComponent('Upit s web stranice') + '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
+<script>
+(function(){
+  var box=document.getElementById('quiz'); if(!box) return;
+  var Q=[
+    {q:'Koliko dugo se pali vaše računalo?',a:['Ispod 30 sekundi','Oko minutu ili dvije','Duže, ili se često zamrzava'],tip:'Optimizacija sustava: brži start i manje zastoja'},
+    {q:'Radite li ručno poslove koje bi računalo moglo samo?',a:['Rijetko ili nikad','Ponekad (tablice, prepisivanje)','Svaki dan'],tip:'Automatizacija ručnih poslova (aplikacija po mjeri)'},
+    {q:'Imate li redovne sigurnosne kopije podataka?',a:['Da, automatski','Ponekad, ručno','Ne, ili nisam siguran/na'],tip:'Automatske sigurnosne kopije vaših podataka'},
+    {q:'Kako izgleda vaša web stranica?',a:['Moderna, brza, dobra na mobitelu','Stara, ali radi','Nemam je ili slabo radi'],tip:'Moderna web stranica koja radi na svim uređajima'},
+    {q:'Što kad nešto zakaže u IT-u?',a:['Imam osobu za brzu podršku','Snalazim se sam/a','Čekam i nadam se najboljem'],tip:'IT podrška: brza reakcija kad nešto zakaže'}
+  ];
+  var i=0, ans=[], timer=null;
+  var $=function(id){return document.getElementById(id)};
+  function show(){
+    $('qStep').textContent='Pitanje '+(i+1)+' od '+Q.length;
+    $('qBar').style.width=(i/Q.length*100)+'%';
+    $('qBack').hidden=(i===0);
+    $('qTitle').textContent=Q[i].q;
+    var o=$('qOpts'); o.innerHTML='';
+    Q[i].a.forEach(function(t,k){
+      var b=document.createElement('button'); b.type='button'; b.className='q-opt'+(ans[i]===2-k?' sel':''); b.textContent=t;
+      b.addEventListener('click',function(){ pick(2-k,b); });
+      o.appendChild(b);
+    });
+  }
+  function pick(score,btn){
+    if(timer) return;
+    ans[i]=score; btn.classList.add('sel');
+    timer=setTimeout(function(){
+      timer=null;
+      if(i<Q.length-1){ i++; show(); } else finish();
+    },260);
+  }
+  function finish(){
+    var total=ans.reduce(function(a,b){return a+b},0);
+    $('qBar').style.width='100%';
+    var v,l;
+    if(total>=8){v='Odlično stojite';l='Većina stvari je pod kontrolom. Fina podešavanja mogu dodatno ubrzati rad i smanjiti rizik.';}
+    else if(total>=5){v='Ima prostora za poboljšanje';l='Nekoliko stvari vas usporava ili izlaže riziku. Dobra vijest: obično se rješavaju brzo.';}
+    else {v='Vrijeme je za promjenu';l='Izgubljeno vrijeme i rizik za podatke su stvarni. Javite se i složit ćemo plan od najhitnijeg.';}
+    $('qVerdict').textContent=v; $('qLead').textContent=l;
+    var order=Q.map(function(_,k){return k}).filter(function(k){return ans[k]<2}).sort(function(a,b){return ans[a]-ans[b]}).slice(0,3);
+    var ul=$('qTips'); ul.innerHTML='';
+    if(!order.length){ var li=document.createElement('li'); li.textContent='Nema hitnih problema. Redovno održavanje jednom godišnje drži sve u formi.'; ul.appendChild(li); }
+    order.forEach(function(k){ var li=document.createElement('li'); li.textContent=Q[k].tip; ul.appendChild(li); });
+    box.classList.add('done');
+    var n=$('qNeedle'); n.style.transform='rotate(-180deg)';
+    $('qScore').textContent='0';
+    setTimeout(function(){ n.style.transform='rotate('+(-180+18*total)+'deg)'; },80);
+    var c=0, step=function(){ if(c<total){ c++; $('qScore').textContent=c; setTimeout(step,1100/Math.max(total,1)); } };
+    setTimeout(step,200);
+    box.dataset.total=total; box.dataset.tips=order.map(function(k){return Q[k].tip}).join('; ');
+  }
+  $('qBack').addEventListener('click',function(){ if(i>0){ i--; show(); } });
+  $('qAgain').addEventListener('click',function(){ i=0; ans=[]; box.classList.remove('done'); show(); box.scrollIntoView({behavior:'smooth',block:'center'}); });
+  $('qSend').addEventListener('click',function(){
+    var t=box.dataset.total, tips=box.dataset.tips;
+    var msg='Rezultat IT provjere: '+t+'/10.'+(tips?'\nZanima me: '+tips+'.':'')+'\n\nMolim besplatan savjet.';
+    var ta=document.querySelector('#form textarea[name="poruka"]'); if(ta) ta.value=msg;
+    document.getElementById('kontakt').scrollIntoView({behavior:'smooth'});
+    setTimeout(function(){ var f=document.querySelector('#form input[name="ime"]'); if(f) f.focus({preventScroll:true}); },600);
+  });
+  show();
+})();
+</script>
+<script>
+(function(){
+  var h=document.getElementById('h1'); if(!h) return;
+  var mq=window.matchMedia('(max-width:980px)');
+  function fit(){
+    h.style.fontSize='';
+    if(!mq.matches) return;
+    var box=h.closest('.hero')||h.parentElement, cs=getComputedStyle(box);
+    var avail=box.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);
+    h.style.display='inline-block'; h.style.fontSize='100px';
+    var w=h.getBoundingClientRect().width;
+    h.style.display=''; 
+    var fs=Math.min(64,Math.max(12,Math.floor(100*avail/w*0.97*10)/10));
+    h.style.fontSize=fs+'px';
+  }
+  fit();
+  window.addEventListener('resize',fit);
+  window.addEventListener('load',fit);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
+  if(mq.addEventListener) mq.addEventListener('change',fit);
+})();
+</script>
+</body>
+</html>
