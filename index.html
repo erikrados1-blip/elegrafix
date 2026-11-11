@@ -373,6 +373,43 @@ footer a:hover{color:var(--ink)}
 .mobile-panel.open{display:grid}
 .mobile-panel{inset:calc(70px + env(safe-area-inset-top,0px)) 16px auto}
 
+
+/* ---- IT provjera (kviz) ---- */
+.quiz{padding:20px 0 110px}
+.quiz-head{max-width:640px;margin-bottom:34px}
+.quiz-box{position:relative;border:1px solid var(--line);border-radius:36px;padding:44px;background:linear-gradient(160deg,rgba(46,230,166,.09),rgba(91,140,255,.08) 55%,rgba(16,25,46,.75));box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.q-top{display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--muted);font-size:.9rem;margin-bottom:12px;min-height:26px}
+.q-back{background:none;border:0;color:var(--muted);font:inherit;font-size:.9rem;cursor:pointer;padding:4px 0}
+.q-back:hover{color:var(--ink)}
+.q-bar{height:6px;border-radius:9px;background:rgba(255,255,255,.08);overflow:hidden;margin-bottom:28px}
+.q-bar i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--mint),var(--blue));transition:width .5s var(--ease)}
+.q-title{font-family:Syne,sans-serif;font-size:clamp(1.3rem,3.6vw,1.9rem);line-height:1.2;letter-spacing:-.02em;margin:0 0 22px;font-weight:700}
+.q-opts{display:grid;gap:12px}
+.q-opt{display:block;width:100%;text-align:left;padding:18px 20px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--ink);font:inherit;font-size:1.02rem;line-height:1.35;cursor:pointer;transition:border-color .25s,background .25s,transform .25s}
+.q-opt:hover{border-color:rgba(46,230,166,.55);background:rgba(46,230,166,.07)}
+.q-opt.sel{border-color:var(--mint);background:rgba(46,230,166,.16)}
+.q-result{display:none;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px;align-items:center}
+.quiz-box.done .q-quiz{display:none}
+.quiz-box.done .q-result{display:grid}
+.q-gauge{text-align:center}
+.q-score{margin-top:-6px;font-family:Syne,sans-serif;font-size:3.2rem;font-weight:800;letter-spacing:-.04em;line-height:1}
+.q-score small{font-size:1.3rem;color:var(--muted);font-weight:600}
+.q-text h3{font-family:Syne,sans-serif;font-size:clamp(1.4rem,3.4vw,1.9rem);line-height:1.15;letter-spacing:-.02em;margin:0 0 10px}
+.q-text p{color:var(--muted);margin:0 0 16px}
+.q-tips{list-style:none;display:grid;gap:8px;margin:0 0 22px;padding:0}
+.q-tips li{position:relative;padding:12px 14px 12px 40px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.03);font-size:.97rem}
+.q-tips li::before{content:"";position:absolute;left:15px;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:var(--mint);box-shadow:0 0 10px var(--mint)}
+.q-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.q-again{background:none;border:0;color:var(--muted);font:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:8px 4px}
+.q-again:hover{color:var(--ink)}
+@media(max-width:780px){
+  .quiz{padding:10px 0 80px}
+  .quiz-box{padding:24px 18px;border-radius:26px}
+  .q-result{grid-template-columns:1fr;gap:22px}
+  .q-gauge .gauge{max-width:300px}
+  .q-actions .btn{width:100%}
+  .q-opt{padding:16px}
+}
 @media(max-width:980px),(max-height:620px){
   .h-scroll{height:auto !important}
   .h-sticky{position:relative;height:auto;overflow:visible;padding:80px 0}
@@ -381,6 +418,10 @@ footer a:hover{color:var(--ink)}
   .h-head{flex-direction:column;align-items:flex-start}
 }
 @media(max-width:980px){
+  .hero > *{min-width:0}
+  h1{white-space:nowrap;line-height:1.1}
+  h1 br{display:none}
+  h1 .grad{display:inline}
   .nav-links,.hero-side-links{display:none}
   .menu-btn{display:inline-block}
   .hero,.speed-box,.contact-grid,.case{grid-template-columns:1fr}
@@ -462,6 +503,7 @@ footer a:hover{color:var(--ink)}
   <div class="nav-links">
     <a href="#usluge">Usluge</a>
     <a href="#rjesenja">Rješenja</a>
+  <a href="#provjera">Provjera</a>
     <a href="#proces">Kako radimo</a>
     <a href="#kontakt">Kontakt</a>
     <a class="btn" href="#kontakt">Zatražite ponudu</a>
@@ -471,6 +513,7 @@ footer a:hover{color:var(--ink)}
 <div class="mobile-panel" id="menu" role="navigation" aria-label="Mobilni izbornik">
   <a href="#usluge">Usluge</a>
   <a href="#rjesenja">Rješenja</a>
+  <a href="#provjera">Provjera</a>
   <a href="#proces">Kako radimo</a>
   <a href="#kontakt">Kontakt</a>
 </div>
@@ -480,7 +523,7 @@ footer a:hover{color:var(--ink)}
   <div class="dots"></div>
   <div>
     <div class="kicker"><i></i> Pametna računalna rješenja</div>
-    <h1>Pretvaramo<br>vaše probleme<br><span class="grad">u kod koji radi.</span></h1>
+    <h1 id="h1">Vaši problemi <br><span class="grad">u kod koji radi.</span></h1>
     <p class="lead">Custom programiranje, izrada web stranica, optimizacija sustava i IT podrška za tvrtke koje žele raditi brže, sigurnije i bez nepotrebnih troškova.</p>
     <div class="hero-actions">
       <a class="btn" href="#kontakt">Zatražite ponudu</a>
@@ -666,6 +709,48 @@ footer a:hover{color:var(--ink)}
   </div>
 </section>
 
+<section class="quiz" id="provjera">
+  <div class="wrap">
+    <div class="quiz-head reveal">
+      <div class="sec-kicker">Besplatna provjera</div>
+      <h2>Koliko je vaš IT zdrav?</h2>
+      <p class="sub">5 brzih pitanja, oko 30 sekundi. Dobijete ocjenu i konkretan savjet što popraviti prvo.</p>
+    </div>
+    <div class="quiz-box reveal d1" id="quiz">
+      <div class="q-quiz">
+        <div class="q-top"><span id="qStep">Pitanje 1 od 5</span><button type="button" class="q-back" id="qBack" hidden>← Natrag</button></div>
+        <div class="q-bar"><i id="qBar"></i></div>
+        <h3 class="q-title" id="qTitle"></h3>
+        <div class="q-opts" id="qOpts"></div>
+      </div>
+      <div class="q-result" id="qResult" aria-live="polite">
+        <div class="q-gauge">
+          <svg class="gauge" viewBox="0 0 200 124" role="img" aria-label="Vaša ocjena">
+            <defs><linearGradient id="qg" gradientUnits="userSpaceOnUse" x1="20" y1="0" x2="180" y2="0"><stop offset="0" stop-color="#ff6b73"/><stop offset=".5" stop-color="#ffc14d"/><stop offset="1" stop-color="#2ee6a6"/></linearGradient></defs>
+            <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="url(#qg)" stroke-width="14" stroke-linecap="round"/>
+            <g class="needle" id="qNeedle">
+              <line x1="100" y1="100" x2="160" y2="100" stroke="#f4f7fb" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="100" cy="100" r="8" fill="#f4f7fb"/><circle cx="100" cy="100" r="3" fill="#0b1222"/>
+            </g>
+            <text x="20" y="120" text-anchor="middle" fill="#93a0b8" font-size="11" font-family="Outfit,sans-serif">Slabo</text>
+            <text x="180" y="120" text-anchor="middle" fill="#93a0b8" font-size="11" font-family="Outfit,sans-serif">Odlično</text>
+          </svg>
+          <div class="q-score"><b id="qScore">0</b><small>/10</small></div>
+        </div>
+        <div class="q-text">
+          <h3 id="qVerdict"></h3>
+          <p id="qLead"></p>
+          <ul class="q-tips" id="qTips"></ul>
+          <div class="q-actions">
+            <button type="button" class="btn" id="qSend">Pošaljite rezultat — besplatan savjet</button>
+            <button type="button" class="q-again" id="qAgain">Ponovi provjeru</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="process" id="proces">
   <div class="wrap">
     <div class="sec-kicker">Kako radimo</div>
@@ -836,6 +921,92 @@ footer a:hover{color:var(--ink)}
     status.textContent = 'Otvaramo vaš e-mail program… Ako se ništa ne dogodi, pišite na elegrafix1@gmail.com.';
     window.location.href = 'mailto:elegrafix1@gmail.com?subject=' + encodeURIComponent('Upit s web stranice') + '&body=' + encodeURIComponent(body);
   });
+})();
+</script>
+<script>
+(function(){
+  var box=document.getElementById('quiz'); if(!box) return;
+  var Q=[
+    {q:'Koliko dugo se pali vaše računalo?',a:['Ispod 30 sekundi','Oko minutu ili dvije','Duže, ili se često zamrzava'],tip:'Optimizacija sustava: brži start i manje zastoja'},
+    {q:'Radite li ručno poslove koje bi računalo moglo samo?',a:['Rijetko ili nikad','Ponekad (tablice, prepisivanje)','Svaki dan'],tip:'Automatizacija ručnih poslova (aplikacija po mjeri)'},
+    {q:'Imate li redovne sigurnosne kopije podataka?',a:['Da, automatski','Ponekad, ručno','Ne, ili nisam siguran/na'],tip:'Automatske sigurnosne kopije vaših podataka'},
+    {q:'Kako izgleda vaša web stranica?',a:['Moderna, brza, dobra na mobitelu','Stara, ali radi','Nemam je ili slabo radi'],tip:'Moderna web stranica koja radi na svim uređajima'},
+    {q:'Što kad nešto zakaže u IT-u?',a:['Imam osobu za brzu podršku','Snalazim se sam/a','Čekam i nadam se najboljem'],tip:'IT podrška: brza reakcija kad nešto zakaže'}
+  ];
+  var i=0, ans=[], timer=null;
+  var $=function(id){return document.getElementById(id)};
+  function show(){
+    $('qStep').textContent='Pitanje '+(i+1)+' od '+Q.length;
+    $('qBar').style.width=(i/Q.length*100)+'%';
+    $('qBack').hidden=(i===0);
+    $('qTitle').textContent=Q[i].q;
+    var o=$('qOpts'); o.innerHTML='';
+    Q[i].a.forEach(function(t,k){
+      var b=document.createElement('button'); b.type='button'; b.className='q-opt'+(ans[i]===2-k?' sel':''); b.textContent=t;
+      b.addEventListener('click',function(){ pick(2-k,b); });
+      o.appendChild(b);
+    });
+  }
+  function pick(score,btn){
+    if(timer) return;
+    ans[i]=score; btn.classList.add('sel');
+    timer=setTimeout(function(){
+      timer=null;
+      if(i<Q.length-1){ i++; show(); } else finish();
+    },260);
+  }
+  function finish(){
+    var total=ans.reduce(function(a,b){return a+b},0);
+    $('qBar').style.width='100%';
+    var v,l;
+    if(total>=8){v='Odlično stojite';l='Većina stvari je pod kontrolom. Fina podešavanja mogu dodatno ubrzati rad i smanjiti rizik.';}
+    else if(total>=5){v='Ima prostora za poboljšanje';l='Nekoliko stvari vas usporava ili izlaže riziku. Dobra vijest: obično se rješavaju brzo.';}
+    else {v='Vrijeme je za promjenu';l='Izgubljeno vrijeme i rizik za podatke su stvarni. Javite se i složit ćemo plan od najhitnijeg.';}
+    $('qVerdict').textContent=v; $('qLead').textContent=l;
+    var order=Q.map(function(_,k){return k}).filter(function(k){return ans[k]<2}).sort(function(a,b){return ans[a]-ans[b]}).slice(0,3);
+    var ul=$('qTips'); ul.innerHTML='';
+    if(!order.length){ var li=document.createElement('li'); li.textContent='Nema hitnih problema. Redovno održavanje jednom godišnje drži sve u formi.'; ul.appendChild(li); }
+    order.forEach(function(k){ var li=document.createElement('li'); li.textContent=Q[k].tip; ul.appendChild(li); });
+    box.classList.add('done');
+    var n=$('qNeedle'); n.style.transform='rotate(-180deg)';
+    $('qScore').textContent='0';
+    setTimeout(function(){ n.style.transform='rotate('+(-180+18*total)+'deg)'; },80);
+    var c=0, step=function(){ if(c<total){ c++; $('qScore').textContent=c; setTimeout(step,1100/Math.max(total,1)); } };
+    setTimeout(step,200);
+    box.dataset.total=total; box.dataset.tips=order.map(function(k){return Q[k].tip}).join('; ');
+  }
+  $('qBack').addEventListener('click',function(){ if(i>0){ i--; show(); } });
+  $('qAgain').addEventListener('click',function(){ i=0; ans=[]; box.classList.remove('done'); show(); box.scrollIntoView({behavior:'smooth',block:'center'}); });
+  $('qSend').addEventListener('click',function(){
+    var t=box.dataset.total, tips=box.dataset.tips;
+    var msg='Rezultat IT provjere: '+t+'/10.'+(tips?'\nZanima me: '+tips+'.':'')+'\n\nMolim besplatan savjet.';
+    var ta=document.querySelector('#form textarea[name="poruka"]'); if(ta) ta.value=msg;
+    document.getElementById('kontakt').scrollIntoView({behavior:'smooth'});
+    setTimeout(function(){ var f=document.querySelector('#form input[name="ime"]'); if(f) f.focus({preventScroll:true}); },600);
+  });
+  show();
+})();
+</script>
+<script>
+(function(){
+  var h=document.getElementById('h1'); if(!h) return;
+  var mq=window.matchMedia('(max-width:980px)');
+  function fit(){
+    h.style.fontSize='';
+    if(!mq.matches) return;
+    var box=h.closest('.hero')||h.parentElement, cs=getComputedStyle(box);
+    var avail=box.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);
+    h.style.display='inline-block'; h.style.fontSize='100px';
+    var w=h.getBoundingClientRect().width;
+    h.style.display=''; 
+    var fs=Math.min(64,Math.max(12,Math.floor(100*avail/w*0.97*10)/10));
+    h.style.fontSize=fs+'px';
+  }
+  fit();
+  window.addEventListener('resize',fit);
+  window.addEventListener('load',fit);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
+  if(mq.addEventListener) mq.addEventListener('change',fit);
 })();
 </script>
 </body>
